@@ -1,0 +1,21 @@
+{
+ "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "runtime": "node",
+        "elmPath": "elm",
+        "elmFormatPath": "elm-format",
+        "elmTestPath": "elm-test"
+      }
+    }
+ },
+ "codeLens.enable": true,
+ "suggest.echodocSupport": true,
+ "suggest.maxCompleteItemCount": 20,
+ "suggest.enablePreview": true,
+ "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "elm"]
+}
