@@ -17,5 +17,15 @@
  "suggest.echodocSupport": true,
  "suggest.maxCompleteItemCount": 20,
  "suggest.enablePreview": true,
- "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "elm"]
+ "solargraph.formatting": true,
+ "solargraph.diagnostics": true,
+ "coc.preferences.formatOnSaveFiletypes": [
+   "elm",
+   "javascript",
+   "javascriptreact",
+   "json",
+   "ruby",
+   "typescript",
+   "typescriptreact"
+ ]
 }

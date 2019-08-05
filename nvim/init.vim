@@ -242,13 +242,16 @@ set termguicolors
 " Editor theme
 set background=light
 try
-  colorscheme solarized
+  colorscheme OceanicNext
+  " colorscheme solarized
+" let g:solarized_termcolors=256
 catch
   colorscheme slate
 endtry
 
 " Vim airline theme
-let g:airline_theme='solarized'
+let g:airline_theme='oceanicnext'
+" let g:airline_theme='solarized'
 
 " Add custom highlights in method that is executed every time a
 " colorscheme is sourced
@@ -320,14 +323,16 @@ endfunction
 
 " === Denite shorcuts === "
 "   ;         - Browser currently open buffers
-"   <leader>t - Browse list of files in current directory
+"   <leader>p - Browse list of files in current directory
 "   <leader>g - Search current directory for occurences of given term and
 "   close window if no results
 "   <leader>j - Search current directory for occurences of word under cursor
 nmap ; :Denite buffer -split=floating -winrow=1<CR>
-nmap <leader>t :Denite file/rec -split=floating -winrow=1<CR>
+nmap <leader>p :Denite file/rec -split=floating -winrow=1<CR>
 nnoremap <leader>g :<C-u>Denite grep:. -no-empty<CR>
 nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
+call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 
 
 "   <Space> - PageDown
@@ -406,3 +411,33 @@ let g:elm_format_fail_silently = 0
 let g:elm_setup_keybindings = 0
 
 set keywordprg=:call\ CocAction('doHover')
+let g:WebDevIconsOS = 'Darwin'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['ex'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['exs'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['jsx'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['vim'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rb'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rabl'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['erb'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['yaml'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['yml'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['svg'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['json'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['elm'] = ''
+
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*vimrc.*'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.ruby-version'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.ruby-gemset'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.rspec'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['Rakefile'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['application.rb'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['environment.rb'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['routes.rb'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['spring.rb'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.keep'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['package.json'] = ''
+
