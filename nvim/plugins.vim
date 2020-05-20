@@ -36,12 +36,6 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 " Tmux/Neovim movement integration
 Plug 'christoomey/vim-tmux-navigator'
 
-" Denite - Fuzzy finding, buffer management
-Plug 'Shougo/denite.nvim', { 'commit': '29bfd4c53271c7a150def2388e059746ae4c1713' }
-
-" Print function signatures in echo area
-Plug 'Shougo/echodoc.vim'
-
 " === Git Plugins === "
 " Enable git changes to be shown in sign column
 Plug 'mhinz/vim-signify'
@@ -60,9 +54,6 @@ Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 
 " === Syntax Highlighting === "
-
-" Syntax highlighting for nginx
-Plug 'chr4/nginx.vim'
 
 " Syntax highlighting for javascript libraries
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -84,6 +75,7 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'micha/vim-colors-solarized'
+Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -99,9 +91,18 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-rake'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ElmCast/elm-vim'
+Plug 'fsharp/vim-fsharp', {
+      \ 'for': 'fsharp',
+      \ 'do':  'make fsautocomplete',
+      \}
+
+Plug 'jparise/vim-graphql'
+Plug 'dermusikman/sonicpi.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
-
