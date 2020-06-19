@@ -1,55 +1,33 @@
 {
- "languageserver": {
-   "elmLS": {
-     "command": "elm-language-server",
-     "args": ["--stdio"],
-     "filetypes": ["elm"],
-     "rootPatterns": ["elm.json"],
-     "initializationOptions": {
-       "runtime": "node",
-       "elmPath": "elm",
-       "elmFormatPath": "elm-format",
-       "elmTestPath": "elm-test"
-     }
-   },
-   "haskell": {
-     "command": "~/.local/bin/hie-wrapper",
-     "args": ["--lsp"],
-     "rootPatterns": [
-       "stack.yaml",
-       "cabal.config",
-       "package.yaml"
-     ],
-     "filetypes": [
-       "hs",
-       "lhs",
-       "haskell"
-     ],
-     "initializationOptions": {
-       "languageServerHaskell": {
-         "hlintOn": true
-       }
-     }
-   }
- },
- "codeLens.enable": true,
- "suggest.echodocSupport": true,
- "suggest.maxCompleteItemCount": 20,
- "suggest.enablePreview": true,
- "solargraph.formatting": false,
- "solargraph.autoformat": false,
- "solargraph.diagnostics": true,
- "solargraph.references": true,
- "solargraph.logLevel": "debug",
- "coc.preferences.formatOnSaveFiletypes": [
-   "elm",
-   "fsharp",
-   "javascript",
-   "javascriptreact",
-   "ruby",
-   "json",
-   "rust",
-   "typescript",
-   "typescriptreact"
- ]
+  "languageserver": {
+    "haskell": {
+      "command": "~/.local/bin/hie-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": ["stack.yaml", "cabal.config", "package.yaml"],
+      "filetypes": ["hs", "lhs", "haskell"],
+      "initializationOptions": {
+        "languageServerHaskell": {
+          "hlintOn": true
+        }
+      }
+    }
+  },
+  "codeLens.enable": true,
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+  "suggest.enablePreview": true,
+  "solargraph.formatting": false,
+  "solargraph.autoformat": false,
+  "solargraph.diagnostics": true,
+  "solargraph.references": true,
+  "solargraph.logLevel": "debug",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "fsharp",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "rust",
+    "typescript",
+    "typescriptreact"
+  ]
 }

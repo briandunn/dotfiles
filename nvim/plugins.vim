@@ -31,7 +31,8 @@ Plug 'rstacruz/vim-closer'
 Plug 'easymotion/vim-easymotion'
 
 " Intellisense Engine
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Tmux/Neovim movement integration
 Plug 'christoomey/vim-tmux-navigator'
@@ -91,7 +92,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-rake'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ElmCast/elm-vim'
 Plug 'fsharp/vim-fsharp', {
@@ -103,6 +103,7 @@ Plug 'jparise/vim-graphql'
 Plug 'dermusikman/sonicpi.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'mhinz/vim-startify'
 
 " Initialize plugin system
 call plug#end()

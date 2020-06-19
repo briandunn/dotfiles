@@ -371,6 +371,23 @@ if executable("rg")
     set grepprg=rg\ --vimgrep\ --no-heading
     set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
+
+
+
+function! RBPrettier()
+  if &ft=="ruby" && executable("rbprettier")
+    :%!rbprettier --stdin-filepath %
+  endif
+endfunction
+
+augroup moar_ruby
+  au!
+  autocmd FileType ruby set foldmethod=indent
+  autocmd BufWritePre * :call RBPrettier()
+    " autocmd bufwritepost *.js silent !standard % --format
+    " set autoread
+augroup END
+
 autocmd BufNewFile,BufRead Jenkinsfile set ft=groovy
 autocmd FileType yaml set foldmethod=indent
 
