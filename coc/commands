@@ -1,0 +1,5 @@
+prettier.formatFile
+workspace.showOutput
+prettier.open-output
+'rename'
+'format'

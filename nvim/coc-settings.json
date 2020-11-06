@@ -2,9 +2,19 @@
   "languageserver": {
     "haskell": {
       "command": "~/.local/bin/hie-wrapper",
-      "args": ["--lsp"],
-      "rootPatterns": ["stack.yaml", "cabal.config", "package.yaml"],
-      "filetypes": ["hs", "lhs", "haskell"],
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+        "stack.yaml",
+        "cabal.config",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
       "initializationOptions": {
         "languageServerHaskell": {
           "hlintOn": true
@@ -12,19 +22,32 @@
       }
     }
   },
+  "prettier.formatterPriority": -1,
+  "prettier.disableLanguages": [
+    "ruby"
+  ],
   "codeLens.enable": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "solargraph.logLevel": "warn",
+  "solargraph.transport": "external",
+  "solargraph.checkGemVersion": false,
+  "solargraph.promptDownload": false,
+  "solargraph.externalServer": {
+    "host": "localhost",
+    "port": 7658
+  },
+  "solargraph.trace.server": "off",
+  "sql.database": "postgresql",
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "suggest.enablePreview": true,
-  "solargraph.formatting": false,
-  "solargraph.autoformat": false,
-  "solargraph.diagnostics": true,
-  "solargraph.references": true,
-  "solargraph.logLevel": "debug",
   "coc.preferences.formatOnSaveFiletypes": [
     "fsharp",
     "javascript",
     "javascriptreact",
+    "ruby",
+    "sql",
     "json",
     "rust",
     "typescript",

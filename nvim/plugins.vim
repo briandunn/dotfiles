@@ -100,10 +100,10 @@ Plug 'fsharp/vim-fsharp', {
       \}
 
 Plug 'jparise/vim-graphql'
-Plug 'dermusikman/sonicpi.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
+Plug 'shougo/echodoc'
 
 " Initialize plugin system
 call plug#end()

@@ -1,0 +1,7 @@
+nvim/plugged
+coc/extensions/node_modules
+coc/extensions/coc-fsharp-data
+coc/list*
+coc/history.json
+coc/extensions/yarn-error.log
+nvim/.netrwhist

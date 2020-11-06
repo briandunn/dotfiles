@@ -249,6 +249,9 @@ endfunction
 nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
 nmap <silent> <leader>dj <Plug>(coc-implementation)
+nmap <silent> <leader><CR> <Plug>(coc-rename)
+silent! nunmap gh
+nnoremap <silent> gh :call CocAction('doHover')<CR>
 
 " === vim-better-whitespace === "
 "   <leader>y - Automatically remove trailing whitespace
@@ -306,6 +309,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+xmap <leader>f   <Plug>(coc-format-selected)
+nmap <leader>f   <Plug>(coc-format-selected)
 
 let g:elm_jump_to_error = 0
 let g:elm_make_show_warnings = 0
@@ -356,14 +361,8 @@ let g:fsharp_completion_helptext = 0
 
 augroup sonicpi
   au!
-  nnoremap <leader>s :silent write ! sonic-pi-tool eval-stdin<CR>
+  nnoremap <leader>s :silent :write<CR>:!sonic-pi-tool eval-file %<CR>
   nnoremap <leader>S :silent ! sonic-pi-tool stop<CR>
-  " nnoremap <leader>dc :call lsp#text_document_declaration()<CR>
-  " nnoremap <leader>df :call lsp#text_document_definition()<CR>
-  " nnoremap <leader>h  :call lsp#text_document_hover()<CR>
-  " nnoremap <leader>i  :call lsp#text_document_implementation()<CR>
-  " nnoremap <leader>s  :call lsp#text_document_signature_help()<CR>
-  " nnoremap <leader>td :call lsp#text_document_type_definition()<CR>
 augroup END
 
 
@@ -376,16 +375,15 @@ endif
 
 function! RBPrettier()
   if &ft=="ruby" && executable("rbprettier")
-    :%!rbprettier --stdin-filepath %
+    setlocal formatprg=rbprettier\ --stdin-filepath\ buffer.rb\ --loglevel\ silent
+    normal mRgggqGg`R
   endif
 endfunction
 
 augroup moar_ruby
   au!
   autocmd FileType ruby set foldmethod=indent
-  autocmd BufWritePre * :call RBPrettier()
-    " autocmd bufwritepost *.js silent !standard % --format
-    " set autoread
+  " autocmd BufWritePre * :call RBPrettier()
 augroup END
 
 autocmd BufNewFile,BufRead Jenkinsfile set ft=groovy
