@@ -5,3 +5,4 @@ coc/list*
 coc/history.json
 coc/extensions/yarn-error.log
 nvim/.netrwhist
+coc/extensions/db.json

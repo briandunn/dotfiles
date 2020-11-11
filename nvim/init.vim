@@ -250,6 +250,9 @@ nmap <silent> <leader>dd <Plug>(coc-definition)
 nmap <silent> <leader>dr <Plug>(coc-references)
 nmap <silent> <leader>dj <Plug>(coc-implementation)
 nmap <silent> <leader><CR> <Plug>(coc-rename)
+nmap <silent> <F8> <Plug>(coc-diagnostic-next)
+" shift+F8
+nmap <silent> <F20> <Plug>(coc-diagnostic-next)
 silent! nunmap gh
 nnoremap <silent> gh :call CocAction('doHover')<CR>
 

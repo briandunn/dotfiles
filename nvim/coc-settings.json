@@ -1,55 +1,35 @@
 {
   "languageserver": {
-    "haskell": {
-      "command": "~/.local/bin/hie-wrapper",
-      "args": [
-        "--lsp"
-      ],
-      "rootPatterns": [
-        "stack.yaml",
-        "cabal.config",
-        "package.yaml"
-      ],
-      "filetypes": [
-        "hs",
-        "lhs",
-        "haskell"
-      ],
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
       "initializationOptions": {
-        "languageServerHaskell": {
-          "hlintOn": true
-        }
+        "elmAnalyseTrigger": "save"
       }
     }
   },
-  "prettier.formatterPriority": -1,
-  "prettier.disableLanguages": [
-    "ruby"
-  ],
+  "prettier.disableLanguages": ["ruby"],
   "codeLens.enable": true,
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,
   "solargraph.logLevel": "warn",
-  "solargraph.transport": "external",
   "solargraph.checkGemVersion": false,
   "solargraph.promptDownload": false,
-  "solargraph.externalServer": {
-    "host": "localhost",
-    "port": 7658
-  },
   "solargraph.trace.server": "off",
   "sql.database": "postgresql",
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "suggest.enablePreview": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "elm",
     "fsharp",
     "javascript",
     "javascriptreact",
-    "ruby",
-    "sql",
     "json",
+    "ruby",
     "rust",
+    "sql",
     "typescript",
     "typescriptreact"
   ]
