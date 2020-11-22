@@ -253,6 +253,7 @@ nmap <silent> <leader><CR> <Plug>(coc-rename)
 nmap <silent> <F8> <Plug>(coc-diagnostic-next)
 " shift+F8
 nmap <silent> <F20> <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>. <Plug>(coc-codeaction-line)
 silent! nunmap gh
 nnoremap <silent> gh :call CocAction('doHover')<CR>
 

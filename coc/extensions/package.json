@@ -7,7 +7,7 @@
     "coc-prettier": ">=1.1.18",
     "coc-rls": ">=1.1.6",
     "coc-solargraph": ">=1.1.8",
-    "coc-sql": ">=0.3.3",
+    "coc-sql": ">=0.4.0",
     "coc-tsserver": ">=1.5.8"
   }
 }
