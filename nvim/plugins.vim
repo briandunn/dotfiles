@@ -92,6 +92,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-projectionist'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ElmCast/elm-vim'
 Plug 'fsharp/vim-fsharp', {
@@ -104,6 +105,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'shougo/echodoc'
+Plug 'ecomba/vim-ruby-refactoring'
 
 " Initialize plugin system
 call plug#end()
