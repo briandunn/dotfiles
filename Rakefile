@@ -6,9 +6,10 @@ task :default do
     Pathname(line.strip)
   end
 
+  pp dotfiles
   dotfiles.each do |dotfile|
     dir = Pathname(Dir.home).join(dotfile.dirname)
     mkdir_p(dir, verbose: true) unless dir.exist?
-    ln_s(dotfile, dir, force: force, verbose: true)
+    ln_s(dotfile.expand_path, dir.join(dotfile.basename).expand_path, force: force, verbose: true)
   end
 end
