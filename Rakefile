@@ -4,7 +4,7 @@ require 'pathname'
 
 force = ENV['FORCE']
 task :link do
-  files = %w[.tmux.conf .config .oh-my-zsh/custom]
+  files = %w[.tmux.conf .config .oh-my-zsh/custom .gitconfig]
 
   dotfiles = `git ls-files #{files.join ' '}`.each_line.map do |line|
     Pathname(line.strip)
@@ -14,6 +14,8 @@ task :link do
     dir = Pathname(Dir.home).join(dotfile.dirname)
     mkdir_p(dir, verbose: true) unless dir.exist?
     ln_s(dotfile.expand_path, dir.join(dotfile.basename).expand_path, force: force, verbose: true)
+  rescue StandardError => e
+    warn(e)
   end
 end
 
