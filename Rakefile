@@ -18,7 +18,21 @@ task :link do
 end
 
 task :brew do
-  %w[bat rg asdf git gh gpg tmux nvim rectangle].each do |formula|
+  formulae = %w[
+    asdf
+    bat
+    gh
+    git
+    gpg
+    jq
+    nvim
+    rectangle
+    rg
+    tmux
+    tree
+  ]
+
+  formulae.each do |formula|
     sh 'brew', 'install', formula
   end
 end

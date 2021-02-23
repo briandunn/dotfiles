@@ -8,6 +8,7 @@
     "coc-rls": ">=1.1.6",
     "coc-solargraph": ">=1.2.0",
     "coc-sql": ">=0.4.0",
-    "coc-tsserver": ">=1.6.7"
+    "coc-tsserver": ">=1.6.7",
+    "coc-xml": ">=1.14.0"
   }
 }
