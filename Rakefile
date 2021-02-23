@@ -4,7 +4,13 @@ require 'pathname'
 
 force = ENV['FORCE']
 task :link do
-  files = %w[.tmux.conf .config .oh-my-zsh/custom .gitconfig]
+  files = %w[
+    .tmux.conf
+    .config
+    .oh-my-zsh/custom
+    .gitconfig
+    Library/KeyBindings/DefaultKeyBinding.dict
+  ]
 
   dotfiles = `git ls-files #{files.join ' '}`.each_line.map do |line|
     Pathname(line.strip)
@@ -13,7 +19,12 @@ task :link do
   dotfiles.each do |dotfile|
     dir = Pathname(Dir.home).join(dotfile.dirname)
     mkdir_p(dir, verbose: true) unless dir.exist?
-    ln_s(dotfile.expand_path, dir.join(dotfile.basename).expand_path, force: force, verbose: true)
+    ln_s(
+      dotfile.expand_path,
+      dir.join(dotfile.basename).expand_path,
+      force: force,
+      verbose: true
+    )
   rescue StandardError => e
     warn(e)
   end
@@ -54,12 +65,12 @@ end
 task 'install-node' do
   install_asdf_plugin 'nodejs'
   sh '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
-  install_latest('nodejs')
+  install_latest 'nodejs'
 end
 
 task 'install-ruby' do
   install_asdf_plugin 'ruby'
-  install_latest('ruby')
+  install_latest 'ruby'
 end
 
 task 'install-gems': 'install-ruby' do
