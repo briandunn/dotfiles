@@ -50,6 +50,10 @@ task :brew do
   end
 end
 
+task :nvr do
+  sh 'pip3', 'install', 'neovim-remote', '--user'
+end
+
 def install_latest(plugin)
   sh 'asdf', 'install', plugin, 'latest'
   version = `asdf list #{plugin}`.strip
