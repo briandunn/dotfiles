@@ -365,7 +365,7 @@ let g:fsharp_completion_helptext = 0
 
 augroup sonicpi
   au!
-  nnoremap <leader>s :silent :write<CR>:!sonic-pi-tool eval-file %<CR>
+  nnoremap <leader>s :silent :write<CR>:!sonic-pi-tool eval-file %<CR><CR>
   nnoremap <leader>S :silent ! sonic-pi-tool stop<CR>
 augroup END
 
@@ -390,7 +390,8 @@ augroup moar_ruby
   " autocmd BufWritePre * :call RBPrettier()
 augroup END
 
-autocmd BufNewFile,BufRead Jenkinsfile set ft=groovy
+autocmd BufNewFile,BufRead Jenkinsfile set filetype=groovy
+autocmd BufNewFile,BufRead *.fsproj set filetype=xml
 autocmd FileType yaml set foldmethod=indent
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile

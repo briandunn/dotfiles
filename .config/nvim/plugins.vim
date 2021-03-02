@@ -20,17 +20,20 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
+
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ElmCast/elm-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ecomba/vim-ruby-refactoring'
+Plug 'elixir-editors/vim-elixir'
 Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
 Plug 'gregsexton/gitv'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'kongo2002/fsharp-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
@@ -46,6 +49,7 @@ Plug 'shougo/echodoc'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
@@ -64,6 +68,5 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
-
 " Initialize plugin system
 call plug#end()
