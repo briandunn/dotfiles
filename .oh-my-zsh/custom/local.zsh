@@ -5,6 +5,11 @@ export RUBY_EXTRA_CONFIGURE_OPTIONS="--enable-shared --install-doc"
 # hard coding because ^ is too slow
 source /usr/local/opt/asdf/asdf.sh
 alias vim="nvim --listen ${NVIM_LISTEN_ADDRESS:-/tmp/nvimsocket}"
-alias gap='git add --patch'
 alias be='bundle exec'
+
+# git
+alias gap='git add --patch'
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias gpr='git pull --rebase'
+alias gra='git rebase --abort'

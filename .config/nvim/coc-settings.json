@@ -37,6 +37,7 @@
   "suggest.enablePreview": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "elm",
+    "elixir",
     "fsharp",
     "javascript",
     "javascriptreact",
