@@ -32,6 +32,7 @@
   "solargraph.symbols": true,
   "solargraph.trace.server": "off",
   "sql.database": "postgresql",
+  "sql.formatOptions": { "linesBetweenQueries": 2, "language": "postgresql" },
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "suggest.enablePreview": true,
