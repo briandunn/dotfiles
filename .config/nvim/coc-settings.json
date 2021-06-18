@@ -17,6 +17,7 @@
     }
   },
   "prettier.disableLanguages": ["ruby"],
+  "FSharp.SimplifyNameAnalyzer": true,
   "codeLens.enable": true,
   "solargraph.checkGemVersion": true,
   "solargraph.completion": true,

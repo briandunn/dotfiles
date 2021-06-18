@@ -56,6 +56,7 @@ set shortmess+=c
 
 " === Coc.nvim === "
 " use <tab> for trigger completion and navigate to next complete item
+let g:coc_node_path = '/opt/homebrew/bin/node'
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
@@ -246,14 +247,16 @@ endfunction
 " ============================================================================ "
 
 " === coc.nvim === "
-nmap <silent> <leader>dd <Plug>(coc-definition)
-nmap <silent> <leader>dr <Plug>(coc-references)
-nmap <silent> <leader>dj <Plug>(coc-implementation)
 nmap <silent> <leader><CR> <Plug>(coc-rename)
 nmap <silent> <F8> <Plug>(coc-diagnostic-next)
 " shift+F8
 nmap <silent> <F20> <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>. <Plug>(coc-codeaction-line)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>f   <Plug>(coc-format-selected)
 silent! nunmap gh
 nnoremap <silent> gh :call CocAction('doHover')<CR>
 
@@ -273,15 +276,6 @@ map <leader>w <Plug>(easymotion-bd-w)
 
 " Allows you to save files you opened without write permissions via sudo
 cmap w!! w !sudo tee %
-
-" === vim-jsdoc shortcuts ==="
-" Generate jsdoc for function under cursor
-nmap <leader>z :JsDoc<CR>
-
-" Delete current visual selection and dump in black hole buffer before pasting
-" Used when you want to paste over something without it getting copied to
-" Vim's default buffer
-vnoremap <leader>p "_dP
 
 " ============================================================================ "
 " ===                                 MISC.                                === "
@@ -308,13 +302,6 @@ if has('persistent_undo')
 endif
 set noswapfile
 set mouse=a
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-xmap <leader>f   <Plug>(coc-format-selected)
-nmap <leader>f   <Plug>(coc-format-selected)
 
 let g:elm_jump_to_error = 0
 let g:elm_make_show_warnings = 0
@@ -402,3 +389,7 @@ autocmd  FileType fzf set noshowmode noruler nonu
 
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 nnoremap <leader>p :Files<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <C-b> :Buffers<CR>
+
