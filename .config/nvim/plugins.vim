@@ -20,31 +20,30 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ElmCast/elm-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'elixir-editors/vim-elixir'
-Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
 Plug 'gregsexton/gitv'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'jparise/vim-graphql'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'kongo2002/fsharp-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'mhinz/vim-signify'
 Plug 'mhinz/vim-startify'
 Plug 'micha/vim-colors-solarized'
 Plug 'mxw/vim-jsx'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master'}
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/yajs.vim'
 Plug 'rstacruz/vim-closer'
 Plug 'ryanoasis/vim-devicons'
+Plug 'sheerun/vim-polyglot'
 Plug 'shougo/echodoc'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'

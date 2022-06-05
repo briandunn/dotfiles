@@ -31,6 +31,7 @@
 	excludesfile = ~/.cvsignore
 	editor = vim
 	whitespace = warn
+	precomposeUnicode = true
 [help]
 	autocorrect = 10
 [interactive]
@@ -56,3 +57,5 @@
         email = brian@theophil.us
 [include]
 	path = ~/.gitconfig.local
+[http]
+	cookiefile = /Users/brian/.gitcookies

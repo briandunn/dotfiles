@@ -37,6 +37,7 @@
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "suggest.enablePreview": true,
+  "coc.preferences.willSaveHandlerTimeout": 1000,
   "coc.preferences.formatOnSaveFiletypes": [
     "elm",
     "elixir",
